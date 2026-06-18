@@ -49,7 +49,7 @@
         </collectionProp>
       </Arguments>
       <hashTree/>
-      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables - UAT" enabled="false">
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables - UAT">
         <collectionProp name="Arguments.arguments">
           <elementProp name="IP" elementType="Argument">
             <stringProp name="Argument.name">IP</stringProp>
@@ -89,7 +89,7 @@
         </collectionProp>
       </Arguments>
       <hashTree/>
-      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables - PDY_2">
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables - PDY_2" enabled="false">
         <collectionProp name="Arguments.arguments">
           <elementProp name="IP" elementType="Argument">
             <stringProp name="Argument.name">IP</stringProp>
@@ -103,7 +103,7 @@
           </elementProp>
           <elementProp name="authToken" elementType="Argument">
             <stringProp name="Argument.name">authToken</stringProp>
-            <stringProp name="Argument.value">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZ2l2ZW5fbmFtZSI6Ik1haGVzaCIsImZhbWlseV9uYW1lIjoiIiwianRpIjoiOTgxYTA0ZTUtNjU1OC00ZjQ1LThjODgtYWNjOThhOTNlZjVmIiwidGVuYW50IjoiQVJBVklORCIsInVzZXJfaWQiOiIxIiwidXNlcl9ndWlkIjoiMDE5ZDYxOGQtNGFkZC03OGQ5LTgwMGItNDE5ZWVlMDE0YTMwIiwiZXhwIjoxNzgxODAyNDU5LCJpc3MiOiJPblNpZ2h0QXBwbGljYXRpb24iLCJhdWQiOiJvbnNpZ2h0LWFwaS11c2VycyJ9.BxH6rj4_jjbXZyYIuOCoqISaHYs_CnGN9LAFdC2HcuA</stringProp>
+            <stringProp name="Argument.value">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZ2l2ZW5fbmFtZSI6Ik1haGVzaCIsImZhbWlseV9uYW1lIjoiIiwianRpIjoiNGFlNjFhOGEtOWFjNy00YTQyLThiY2ItMjQzM2U4N2RiYTE5IiwidGVuYW50IjoiQVJBVklORCIsInVzZXJfaWQiOiIxIiwidXNlcl9ndWlkIjoiMDE5ZDYxOGQtNGFkZC03OGQ5LTgwMGItNDE5ZWVlMDE0YTMwIiwiZXhwIjoxNzgxNjM0ODM5LCJpc3MiOiJPblNpZ2h0QXBwbGljYXRpb24iLCJhdWQiOiJvbnNpZ2h0LWFwaS11c2VycyJ9.vfa2-eJXODxPUh2LvbGGAjSiIQx9F8fOR_FsmZg2SX0</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="site" elementType="Argument">
@@ -136,7 +136,7 @@
         <stringProp name="HTTPSampler.implementation"></stringProp>
       </ConfigTestElement>
       <hashTree/>
-      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager">
         <collectionProp name="CookieManager.cookies"/>
         <boolProp name="CookieManager.clearEachIteration">false</boolProp>
         <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
@@ -242,7 +242,7 @@
         </collectionProp>
       </Arguments>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Patient_Registration - Onsight ">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Patient_Registration - Onsight " enabled="true">
         <stringProp name="ThreadGroup.num_threads">${user}</stringProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -253,11 +253,11 @@
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller - No of Patients " enabled="true">
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller - No of Patients ">
           <stringProp name="LoopController.loops">${Loop}</stringProp>
         </LoopController>
         <hashTree>
-          <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
+          <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter">
             <stringProp name="CounterConfig.start">${usercount}</stringProp>
             <stringProp name="CounterConfig.end"></stringProp>
             <stringProp name="CounterConfig.incr">1</stringProp>
@@ -266,7 +266,7 @@
             <boolProp name="CounterConfig.per_user">false</boolProp>
           </CounterConfig>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Patient Registration" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Patient Registration">
             <stringProp name="HTTPSampler.domain">${IP}</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -455,7 +455,7 @@
           <stringProp name="RandomTimer.range">100.0</stringProp>
         </UniformRandomTimer>
         <hashTree/>
-        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
